@@ -1,0 +1,79 @@
+@import './scss/mixins.scss';
+@import './scss/root.scss';
+@import './scss/colors.scss';
+@import './scss/grid.scss';
+
+//-- Sidebar
+.ci-left-sidebar-sec{
+    background: $color-primary;
+    width: 260px;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 30px;
+    .ci-logo{
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 25px;
+        font-style: italic;
+        cursor: pointer;
+        color: #E97E51;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .ci-dashboard-menu{
+        background-color: $color-secondary;
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 15px 0;
+        color: $color-white;
+        border-radius: 8px;
+        width: 100%;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        span{
+            padding: 5px;
+            font-size: 22px;
+        }
+    }
+    .ci-menu-sec{
+        padding-bottom: 25px;
+        width: 100%;
+        
+        &:not(:last-child){
+            border-bottom: 1px solid $color-sb-text-main;
+            margin-bottom: 15px;
+        }
+
+        .ci-main-menu{
+            p{
+                font-weight: 700;
+                font-size: 14px;
+                cursor: pointer;
+                color: $color-sb-text-main;
+                padding: 2px 5px;
+            }
+            .ci-sub-menu{
+                display: flex;
+                align-items: center;
+                padding: 7px 5px;
+                font-weight: 500;
+                font-size: 14px;
+                cursor: pointer;
+                color: $color-sb-text-sub;
+                .material-symbols-outlined{
+                    font-size: 19px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

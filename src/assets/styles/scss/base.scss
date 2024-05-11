@@ -1,0 +1,39 @@
+.container_1{
+    max-width: 1450px;
+    margin: 0 auto;
+
+    @include respond(phone){
+        padding: 0 5px;
+    }
+}
+.container_2{
+    max-width: 980px;
+    margin: 0 auto;
+
+    @include respond(phone){
+        padding: 0 5px;
+    }
+
+    @include respond(nav-res){
+        padding: 0 5px;
+    }
+}
+
+.container_3{
+    max-width: 980px;
+    margin: 0 auto;
+
+    @include respond(phone){
+        padding: 0 5px;
+        margin: 0 5px;
+    }
+}
+
+
+.section{
+    margin-top: 60px;
+  }
+  
+  .section2{
+    margin-top: 25px;
+  }
