@@ -19,7 +19,6 @@
 <script setup>
 import menu from "../../utils/menu";
 import { ref } from "vue";
-
     const menuData = ref(menu);
 </script>
 
