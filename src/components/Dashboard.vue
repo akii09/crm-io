@@ -1,6 +1,7 @@
 <template>
   <div>
     <LeftSideBar />
+    <NavBar />
     <div class="ci-main">
       <div class="row ci-summary">
         <SummaryCard class="column" :title="'Document'" icon="folder_open" value="146.000" percentage="21%" since="Last Week" />
@@ -33,6 +34,7 @@ import LineChart from './sections/LineChart.vue'
 import Table from './sections/Table.vue'
  
 import { ref } from 'vue'
+import NavBar from './sections/NavBar.vue'
 
 const xAxisOne = ref(['Jan', 'Feb', 'Mar', 'Apr']);
 const seriesDataOne = ref([5, 12, 3, 5]);

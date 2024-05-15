@@ -10,9 +10,16 @@
     padding: 30px;
     background-color: $color-bg;
     min-height: 100vh;
+    @include respond(phone){
+        margin-left: 0px;
+        padding: 15px;
+    }
 }
 
 //-- Sidebar
+.ci-left-sidebar-sec-show{
+    display: block !important;
+}
 .ci-left-sidebar-sec{
     position: fixed;
     left: 0px;
@@ -35,6 +42,11 @@
     }
     &::-webkit-scrollbar-track {
         background-color: $color-primary;
+    }
+    
+    // Responsive at mobile view
+    @include respond(phone){
+        display: none;
     }
 
     .ci-logo{
@@ -189,3 +201,19 @@
         background-color: adjust-color($color-info, $lightness: 40%);
     }
 }
+
+// Chart
+// #bar-chart{
+//     @include respond(phone){
+//         min-height: 300px;
+//     }
+//     height: 100%;
+//     width: 100%;
+// }
+// #line-chart{
+//     @include respond(phone){
+//         min-height: 300px;
+//     }
+//     height: 100%;
+//     width: 100%;
+// }
