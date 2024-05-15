@@ -1,121 +1,23 @@
-// Grid init
-/*  GRID OF FOUR  */
-.span_4_of_4 {
-	width: 100%;
-}
-.span_3_of_4 {
-	width: 74.97%;
-}
-.span_2_of_4 {
-	width: 49.95%;
-}
-.span_1_of_4 {
-	width: 24.92%;
-}
-
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 990px) {
-	.col {  margin: 1% 0 1% 0%; }
-	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
-}
-
-
-
-// 1 of 4 grid
-/*  SECTIONS  */
-.grid_section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-/*  COLUMN SETUP  */
-.col {
-	display: block;
-	float:left;
-	margin: 0.3% 0 0.3% 0.1%;
-}
-.col:first-child { margin-left: 0; }
-
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
-
-/*  SECTIONS  */
-.section3 {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-/*  COLUMN SETUP  */
-.col2 {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.5%;
-}
-.col2:first-child { margin-left: 0; }
-
-/*  GROUPING  */
-.group2:before,
-.group2:after { content:""; display:table; }
-.group2:after { clear:both;}
-.group2 { zoom:1; /* For IE 6/7 */ }
-
-/*  GRID OF THREE  */
-.span_3_of_3 { width: 100%; }
-.span_2_of_3 { width: 66.16%; }
-.span_1_of_3 { width: 32.33%; }
-
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-	.col2 {  margin: 1% 0 1% 0%; }
-	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
-}
-
-
-// Grid 4
-
-/*  SECTIONS  */
-.section4 {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-/*  COLUMN SETUP  */
-.col4 {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 0.8%;
-}
-.col4:first-child { margin-left: 0; }
-
-/*  GROUPING  */
-.group4:before,
-.group4:after { content:""; display:table; }
-.group4:after { clear:both;}
-.group4 { zoom:1; /* For IE 6/7 */ }
-
-
-/*  GRID OF FOUR  */
-.span_4_of_4 {
-	width: 100%;
-}
-.span_3_of_4 {
-	width: 74.8%;
-}
-.span_2_of_4 {
-	width: 49.6%;
-}
-.span_1_of_4 {
-	width: 24.4%;
-}
-
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
-}
+.row {
+	display: flex;
+	flex-wrap: wrap; /* Allow the columns to wrap to the next row */
+  }
+  
+  /* Style for each column */
+  .column {
+	flex: 1; /* Each column takes up an equal amount of space */
+	margin: 15px; /* Add some space between columns */
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+	.column {
+	  flex-basis: 50%; /* Two columns per row on screens smaller than 768px */
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.column {
+	  flex-basis: 100%; /* One column per row on screens smaller than 576px */
+	}
+  }

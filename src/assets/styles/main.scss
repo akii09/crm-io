@@ -110,9 +110,9 @@
 
 //-- Header Summary 
 .ci-summary{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
     .ci-summary-card{
         width: 23.2%;
         .ci-card-head{
@@ -160,5 +160,32 @@
                 color: $color-success;
             }
         }
+    }
+}
+// Status tag
+.ci-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-white;
+    &.success{
+        color: $color-success;
+        background-color: adjust-color($color-success, $lightness: 40%);
+    }
+    &.warning{
+        color: $color-warning;
+        background-color: adjust-color($color-warning, $lightness: 30%);
+    }
+    &.danger{
+        color: $color-danger;
+        background-color: adjust-color($color-danger, $lightness: 40%);
+    }
+    &.info{
+        color: $color-info;
+        background-color: adjust-color($color-info, $lightness: 40%);
     }
 }
