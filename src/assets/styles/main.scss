@@ -14,6 +14,8 @@
         margin-left: 0px;
         padding: 15px;
     }
+    // For left sec
+    display: flex;
 }
 
 //-- Sidebar
@@ -139,7 +141,7 @@
                 color: $color-sb-text-main;
             }
             span{
-                font-size: 14px;
+                font-size: 15px;
                 font-weight: 600;
             }
             .material-symbols-outlined{
@@ -174,7 +176,52 @@
         }
     }
 }
-// Status tag
+.ci-card-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin: 0px 35px 15px 35px;
+    width: 100%;
+    h3{
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-sb-text-main;
+    }
+    span{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .material-symbols-outlined{
+        font-size: 22px;
+        color: $color_secondary-2;
+        background-color: $color_secondary-3;
+        padding: 8px;
+        border-radius: 99px;
+    }
+    .ci-card-icon{
+        font-size: 25px;
+        color: $color-sb-text-sub;
+    }
+}
+.ci-card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    .ci-head-sum-sub-text{
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-grey;
+    }
+    .ci-head-sum-sub-text-2{
+        color: $color-success;
+        font-weight: 600;
+    }
+    .trending-up{
+        color: $color-success;
+    }
+}
+// -- Status tag 
 .ci-status{
     display: flex;
     justify-content: center;
@@ -202,18 +249,41 @@
     }
 }
 
-// Chart
-// #bar-chart{
-//     @include respond(phone){
-//         min-height: 300px;
-//     }
-//     height: 100%;
-//     width: 100%;
-// }
-// #line-chart{
-//     @include respond(phone){
-//         min-height: 300px;
-//     }
-//     height: 100%;
-//     width: 100%;
-// }
+// -- Right Side Bar 
+
+.ci-right-sidebar{
+    height: 100%;
+}
+
+.ci-main-left-sec{
+    width: 83%;
+}
+.ci-main-right-sec{
+    width: 17%;
+    height: 100%;
+    margin: 15px 0;
+}
+
+// @ 1412px
+@media screen and (max-width: 1412px) {
+    .ci-main-left-sec{
+        width: 100% !important;
+    } 
+    .ci-main-right-sec{
+        width: 100% !important; 
+    }
+    .ci-main{
+        display: block;
+    }
+    .ci-right-card{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .mt-16{
+        margin-top: 0 !important;
+    }
+    .ci-right-card{
+        margin: 30px 15px 0 15px !important;
+    }
+}

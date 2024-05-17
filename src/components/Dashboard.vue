@@ -3,24 +3,29 @@
     <LeftSideBar />
     <NavBar />
     <div class="ci-main">
-      <div class="row ci-summary">
-        <SummaryCard class="column" :title="'Document'" icon="folder_open" value="146.000" percentage="21%" since="Last Week" />
-        <SummaryCard class="column" :title="'Contact'" icon="folder_shared" value="1400" percentage="17%" since="Last Week" />
-        <SummaryCard class="column" :title="'Email'" icon="email" value="150.700" percentage="21%" since="Last Week" />
-        <SummaryCard class="column" :title="'Document'" icon="folder_open" value="146.021" percentage="21%" since="Last Week" />
-      </div>
-      <div class="row mt-5">
-        <div class="ci-card column">
-          <LineChart />
+      <div class="ci-main-left-sec">
+        <div class="row ci-summary">
+          <SummaryCard class="column" :title="'Document'" icon="folder_open" value="146.000" percentage="21%" since="Last Week" />
+          <SummaryCard class="column" :title="'Contact'" icon="folder_shared" value="1400" percentage="17%" since="Last Week" />
+          <SummaryCard class="column" :title="'Email'" icon="email" value="150.700" percentage="21%" since="Last Week" />
+          <SummaryCard class="column" :title="'Document'" icon="folder_open" value="146.021" percentage="21%" since="Last Week" />
         </div>
-        <div class="ci-card column">
-          <BarChart />
+        <div class="row mt-5">
+          <div class="ci-card column">
+            <LineChart />
+          </div>
+          <div class="ci-card column">
+            <BarChart />
+          </div>
+        </div>
+        <div class="ci-card mt-5 column">
+          <h3>Document</h3>
+          <p class="ci-table-desc">Document tracking information</p>
+          <Table />
         </div>
       </div>
-      <div class="ci-card mt-5 column">
-        <h3>Document</h3>
-        <p class="ci-table-desc">Document tracking information</p>
-        <Table />
+      <div class="ci-main-right-sec">
+        <RightSideBar />
       </div>
     </div>
   </div>
@@ -28,6 +33,7 @@
 
 <script setup>
 import LeftSideBar from './sections/LeftSideBar.vue'
+import RightSideBar from './sections/RightSideBar.vue'
 import SummaryCard from './sections/SummaryCard.vue'
 import BarChart from './sections/BarChart.vue'
 import LineChart from './sections/LineChart.vue'
